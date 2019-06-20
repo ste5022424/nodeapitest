@@ -1,0 +1,32 @@
+{
+    "jwt": {
+        "secret": "mysecret"
+    },
+    "logger": {
+        "appenders": {
+            "file": {
+                "type": "file",
+                "filename": "logs/log.log",
+                "maxLogSize": 104857600,
+                "backups": 10,
+                "layout": {
+                    "type": "json"
+                }
+            },
+            "console": {
+                "type": "console"
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": ["file"],
+                "level": "debug"
+            }
+        }
+    },
+    "express": {
+        "api": {
+            "port": "3000"
+        }
+    }
+}
